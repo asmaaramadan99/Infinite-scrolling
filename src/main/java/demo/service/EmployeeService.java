@@ -28,7 +28,7 @@ public class EmployeeService {
 	
 	public List<Employee> getAllEmployees(Integer page)
 	{
-		
+		 //get page by page
 	        List<Employee> list= new ArrayList();
 	        int startIndex = (page-1)*15;
 	        for(int i=startIndex+1;i<startIndex+16;i++) {
