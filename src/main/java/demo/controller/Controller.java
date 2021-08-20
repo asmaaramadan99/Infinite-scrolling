@@ -15,7 +15,7 @@ import demo.entity.Employee;
 import demo.service.EmployeeService;
 
 @RestController
-@CrossOrigin("*")
+@CrossOrigin("http://localhost:3000")
 public class Controller {
     
 	@Autowired
