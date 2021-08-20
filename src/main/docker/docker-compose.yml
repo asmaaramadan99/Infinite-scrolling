@@ -1,0 +1,37 @@
+version: '2'
+
+services:
+  app:
+    image: 'project:0.0.1-SNAPSHOT'
+    profiles: ["dev"]
+    build:
+      context: .
+    container_name: app
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/postgres
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=1234
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+      
+  frontend:
+    image: 'sample:dev'
+    depends_on:
+      - app
+    ports:
+      - "3000:3000"  
+  
+  
+
+ 
+          
+  db:
+    image: 'postgres:13.1-alpine'
+    profiles: ["dev"]
+    container_name: db
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=1234
