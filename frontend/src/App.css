@@ -1,0 +1,38 @@
+.App {
+  display: grid;
+  text-align: center;
+  margin: 0;
+  justify-content: center;
+  justify-items: center;
+  background: linear-gradient(#e66465, #9198e5);
+  min-height: 100vh;
+
+}
+.button {
+  height: 80px;
+  width: 336px;
+  text-align: center;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  text-shadow: 10px;
+  font-size: 20px;
+  outline: transparent;
+  font-weight: bolder;
+  background-image: linear-gradient(to right, #540374, #945fd1);
+}
+  
+.main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  height: 100%; 
+  margin: auto;
+}
+
+
+
+
